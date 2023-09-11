@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>signup</title>
+</head>
+   <body>
+      <form action="{% url 'login' %}" method="post">
+        {% csrf_token %}
+        <h3>SignUp page</h3>
+
+        <label for="username">Username</label>
+        <input type="text" placeholder="Username" name="username" id="usernme">
+
+        <label for="email">Email</label>
+        <input type="email" placeholder="Email or Phone" name="email" id="email">
+
+
+        <label for="password1">Password</label>
+        <input type="password" placeholder="Password" name="password1" id="password1">
+
+        <label for="password2">Confirm Password</label>
+        <input type="password" placeholder="Password" name="password2" id="password2">
+
+        <button type="submit">Signup</button>
+
+        <a href="{% url 'login' %}">I have already account</a>
+
+      </form>     
+   </body>
+</html>
